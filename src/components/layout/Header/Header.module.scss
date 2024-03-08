@@ -1,0 +1,12 @@
+@import "@/styles/colors";
+
+.headerContainer {
+  padding: 1rem 1.5rem;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  background: $blue-color-600;
+}

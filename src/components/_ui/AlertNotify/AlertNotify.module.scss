@@ -1,0 +1,68 @@
+@import "@/styles/colors";
+
+.alertContainer {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  z-index: 99999999;
+  transform: translateX(-50%);
+
+  border-radius: 20px;
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  max-width: 90%;
+
+  color: $white-color;
+  line-height: 1;
+  box-shadow: 1px 5px 10px rgba(0 0 0 / 0.15);
+
+  animation: slideUp 0.2s;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .alertIcon {
+    height: 1.2rem;
+  }
+
+  button {
+    line-height: 0;
+    margin-left: auto;
+    border: none;
+
+    background: transparent;
+    color: $white-color;
+
+    cursor: pointer;
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}
+
+.success {
+  background: $green-color-100;
+}
+
+.error {
+  background: $red-color-100;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 20%);
+    opacity: 0.3;
+  }
+  to {
+    transform: translate(-50%, 0%);
+
+    opacity: 1;
+  }
+}

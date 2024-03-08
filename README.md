@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">🚗 Teste técnico para a vaga de dev front-end | PsicoManager</h1>
 
-## Getting Started
+<h3> 💻 Sobre o projeto</h3>
 
-First, run the development server:
+<p>Descrição: Sistema de posts para vaga de de dev front-end</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h4>Tecnologias/Bibliotecas utilizadas: </h4>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<ul>
+  
+    - NextJS 14, 
+    - SASS/CSS (Modules);
+    - Typescript/Javascript;
+    - Axios;
+    - Material UI;
+    - Fontawesome;
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</ul>
+  
+<h3>📝 Funcionalidades</h3>
+  <ul>
+    <li>Listagem de posts;</li>
+    <li>Visualização de post individual;</li>
+    <li>Visualização de comentários de um post;</li>
+  </ul>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<br />
+<br />
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h2>👷 Como testar? </h2>
+<h3>Entre com o seguinte link </h3>
+<a href="#">#</a>
+<h3>Ou</h3>
+<li>Clone o repositório com: git clone #</li>
+<li>Entre em uma IDE de sua preferência </li>
+<li>Instale as dependências com 'npm install' ou 'yarn'</li>
+<li>Execute o projeto com 'npm run dev' ou 'yarn dev'</li>
+    
+<br>
+ 
+<div>
+ <h2>🎓 Autor</h2>
+ <h3>Feito com 💜 by <a href="https://github.com/johnatanSO" target="_blank">Johnatan Santos</a></h3>
+</div>
