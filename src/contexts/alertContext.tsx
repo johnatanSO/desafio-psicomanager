@@ -12,6 +12,7 @@ interface AlertConfirmConfigs {
   open: boolean
   title: string
   text: string
+  textColor?: string
   handleClose: () => void
   onClickAgree(): Promise<void>
 }
@@ -81,7 +82,9 @@ export function AlertContextComponent({
       }}
     >
       {children}
+
       <AlertConfirm />
+
       <AlertNotify />
     </AlertContext.Provider>
   )

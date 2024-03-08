@@ -57,65 +57,64 @@ export function Post({ title, body, id, getPosts, handleEditPost }: Props) {
       ...alertConfirmConfigs,
       open: true,
       title: 'Alerta de confirmação',
-      text: 'Deseja realmente excluir este post?',
+      text: 'Tem certezq que deseja realmente excluir este post?',
+      textColor: '#ed4252',
       onClickAgree: onDeletePost,
     })
   }
 
   return (
-    <>
-      <li className={style.postContainer}>
-        <header>
-          <h4>{title || 'Título'}</h4>
+    <li className={style.postContainer}>
+      <header>
+        <h4>{title || 'Título'}</h4>
 
-          <button
-            onClick={(event) => {
-              setAnchorOptions(event?.currentTarget)
-            }}
-            type="button"
-          >
-            <FontAwesomeIcon className={style.icon} icon={faEllipsis} />
-          </button>
+        <button
+          onClick={(event) => {
+            setAnchorOptions(event?.currentTarget)
+          }}
+          type="button"
+        >
+          <FontAwesomeIcon className={style.icon} icon={faEllipsis} />
+        </button>
 
-          <Popover
-            open={!!anchorOptions}
-            anchorEl={anchorOptions}
-            onClose={() => {
-              setAnchorOptions(null)
-            }}
-          >
-            <Typography>
-              <div className={style.optionsContainer}>
-                <button
-                  className={style.editButton}
-                  type="button"
-                  onClick={() => {
-                    handleEditPost({ title, body, id })
-                  }}
-                >
-                  <FontAwesomeIcon icon={faPen} className={style.icon} />
-                  Editar
-                </button>
+        <Popover
+          open={!!anchorOptions}
+          anchorEl={anchorOptions}
+          onClose={() => {
+            setAnchorOptions(null)
+          }}
+        >
+          <Typography>
+            <div className={style.optionsContainer}>
+              <button
+                className={style.editButton}
+                type="button"
+                onClick={() => {
+                  handleEditPost({ title, body, id })
+                }}
+              >
+                <FontAwesomeIcon icon={faPen} className={style.icon} />
+                Editar
+              </button>
 
-                <Divider />
+              <Divider />
 
-                <button
-                  className={style.deleteButton}
-                  onClick={handleDeletePost}
-                  type="button"
-                >
-                  <FontAwesomeIcon icon={faTrash} className={style.icon} />
-                  Excluir
-                </button>
-              </div>
-            </Typography>
-          </Popover>
-        </header>
+              <button
+                className={style.deleteButton}
+                onClick={handleDeletePost}
+                type="button"
+              >
+                <FontAwesomeIcon icon={faTrash} className={style.icon} />
+                Excluir
+              </button>
+            </div>
+          </Typography>
+        </Popover>
+      </header>
 
-        <main>
-          <p>{body || '--'}</p>
-        </main>
-      </li>
-    </>
+      <main>
+        <p>{body || '--'}</p>
+      </main>
+    </li>
   )
 }

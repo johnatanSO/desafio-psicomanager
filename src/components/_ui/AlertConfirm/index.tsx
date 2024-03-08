@@ -16,7 +16,12 @@ export function AlertConfirm() {
     >
       <div className={style.alertContainer}>
         <h3 className={style.title}>{alertConfirmConfigs.title || '--'}</h3>
-        <span className={style.text}>{alertConfirmConfigs.text || '--'}</span>
+        <p
+          style={{ color: alertConfirmConfigs?.textColor || '' }}
+          className={style.text}
+        >
+          {alertConfirmConfigs.text || '--'}
+        </p>
 
         <div className={style.buttonsContainer}>
           <button
