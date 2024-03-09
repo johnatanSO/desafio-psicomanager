@@ -8,7 +8,7 @@ export function Footer() {
     <footer className={style.footerContainer}>
       <p>
         {' '}
-        &copy; Desafio Psicomanager - Johnatan Santos {year} | v
+        &copy; Desafio Psicomanager - Johnatan Santos | {year} | v
         {packageJSON.version}
       </p>
     </footer>

@@ -12,10 +12,11 @@
 
   animation: fadeIn 0.2s;
 
+  width: 100%;
+
   header,
-  main,
-  footer {
-    padding: 0.7rem 1rem;
+  main, footer {
+    padding: 1rem 1.2rem;
   }
 
   header {
@@ -45,9 +46,37 @@
 
   main {
     border-top: 1px solid $gray-color-100;
+    border-bottom: 1px solid $gray-color-100;
 
     p {
       font-size: 0.875rem;
+    }
+  }
+
+  footer {
+    .showCommentsButton {
+      border: none;
+      background: $blue-color-400;
+      color: $white-color;
+
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      padding: 0.4rem 0.7rem;
+      border-radius: 20px;
+
+      cursor: pointer;
+      transition: filter 0.2s;
+
+      &:not(:disabled):hover {
+        filter: brightness(0.8);
+      }
+
+      &:disabled{
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
     }
   }
 }
@@ -85,13 +114,15 @@
   }
 }
 
+.skeleton {
+  border-radius: 20px !important;
+}
+
 @keyframes fadeIn {
   from {
-    transform: scale(0.9);
     opacity: 0;
   }
   to {
     opacity: 1;
-    transform: scale(1);
   }
 }

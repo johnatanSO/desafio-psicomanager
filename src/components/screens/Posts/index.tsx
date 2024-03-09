@@ -10,13 +10,16 @@ import { Empty } from '@/components/_ui/Empty'
 import { listPostsService } from '@/services/posts/listPosts/listPostsService'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { SkeletonPost } from './Post/SkeletonPost'
 
 export function Posts() {
   const [posts, setPosts] = useState<IPost[]>([])
   const [modalPostFormOpened, setModalPostFormOpened] = useState<boolean>(false)
   const [postToEdit, setPostToEdit] = useState<IPost | null>(null)
+  const [loadingPosts, setLoadingPosts] = useState<boolean>(false)
 
   function getPosts() {
+    setLoadingPosts(true)
     listPostsService()
       .then((res) => {
         setPosts(res.data)
@@ -24,10 +27,14 @@ export function Posts() {
       .catch((err) => {
         console.error(err)
       })
+      .finally(() => {
+        setLoadingPosts(false)
+      })
   }
 
   function handleEditPost(post: IPost) {
     setPostToEdit(post)
+    setModalPostFormOpened(true)
   }
 
   function handleNewPost() {
@@ -49,11 +56,14 @@ export function Posts() {
         Novo post
       </button>
 
-      {posts.length === 0 && <Empty text="Nenhum post encontrado" />}
+      {!loadingPosts && posts.length === 0 && (
+        <Empty text="Nenhum post encontrado" />
+      )}
 
-      {posts.length > 0 && (
-        <ul className={style.listPosts}>
-          {posts.map((post) => {
+      <ul className={style.listPosts}>
+        {!loadingPosts &&
+          posts.length > 0 &&
+          posts.map((post) => {
             return (
               <Post
                 key={post.id}
@@ -65,8 +75,12 @@ export function Posts() {
               />
             )
           })}
-        </ul>
-      )}
+
+        {loadingPosts &&
+          [1, 2, 3, 4, 5, 6].map((skeletonItem) => {
+            return <SkeletonPost key={skeletonItem} />
+          })}
+      </ul>
 
       {modalPostFormOpened && (
         <PostForm
@@ -75,6 +89,7 @@ export function Posts() {
           postToEdit={postToEdit}
           handleClose={() => {
             setModalPostFormOpened(false)
+            if (postToEdit) setPostToEdit(null)
           }}
         />
       )}

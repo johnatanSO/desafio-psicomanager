@@ -3,7 +3,12 @@
 import { useContext, useState } from 'react'
 import { Divider, Popover, Typography } from '@mui/material'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEllipsis, faPen, faTrash } from '@fortawesome/free-solid-svg-icons'
+import {
+  faComments,
+  faEllipsis,
+  faPen,
+  faTrash,
+} from '@fortawesome/free-solid-svg-icons'
 
 import style from './Post.module.scss'
 import { AlertContext } from '@/contexts/alertContext'
@@ -53,11 +58,12 @@ export function Post({ title, body, id, getPosts, handleEditPost }: Props) {
   }
 
   function handleDeletePost() {
+    setAnchorOptions(null)
     setAlertConfirmConfigs({
       ...alertConfirmConfigs,
       open: true,
       title: 'Alerta de confirmação',
-      text: 'Tem certezq que deseja realmente excluir este post?',
+      text: 'Tem certeza que deseja realmente excluir este post?',
       textColor: '#ed4252',
       onClickAgree: onDeletePost,
     })
@@ -83,6 +89,14 @@ export function Post({ title, body, id, getPosts, handleEditPost }: Props) {
           onClose={() => {
             setAnchorOptions(null)
           }}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
         >
           <Typography>
             <div className={style.optionsContainer}>
@@ -91,6 +105,7 @@ export function Post({ title, body, id, getPosts, handleEditPost }: Props) {
                 type="button"
                 onClick={() => {
                   handleEditPost({ title, body, id })
+                  setAnchorOptions(null)
                 }}
               >
                 <FontAwesomeIcon icon={faPen} className={style.icon} />
@@ -115,6 +130,13 @@ export function Post({ title, body, id, getPosts, handleEditPost }: Props) {
       <main>
         <p>{body || '--'}</p>
       </main>
+
+      <footer>
+        <button className={style.showCommentsButton} type="button">
+          <FontAwesomeIcon icon={faComments} className={style.icon} />
+          Comentários
+        </button>
+      </footer>
     </li>
   )
 }

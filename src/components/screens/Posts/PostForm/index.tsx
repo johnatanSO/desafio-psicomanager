@@ -2,7 +2,6 @@ import { useContext } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
 import style from './PostForm.module.scss'
-import { IPostDataForm } from '../interfaces/IPostDataForm'
 import { AlertContext } from '@/contexts/alertContext'
 import { createPostService } from '@/services/posts/createPost/createPostService'
 import { CustomTextField } from '@/components/_ui/CustomTextField'
@@ -10,6 +9,7 @@ import { Loading } from '@/components/_ui/Loading'
 import { Modal } from '@mui/material'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { updatePostService } from '@/services/posts/updatePost/updatePostService'
 import { IPost } from '../interfaces/IPost'
 
 type Props = {
@@ -32,11 +32,11 @@ export function PostForm({ getPosts, open, handleClose, postToEdit }: Props) {
     handleSubmit,
     reset,
     formState: { isSubmitting },
-  } = useForm<IPostDataForm | IPost>({
+  } = useForm<IPost>({
     defaultValues: postToEdit || defaultValuesNewPost,
   })
 
-  const onCreatePost: SubmitHandler<IPostDataForm> = ({ title, body }) => {
+  const onCreatePost: SubmitHandler<IPost> = ({ title, body }) => {
     createPostService({ title, body })
       .then(() => {
         setAlertNotifyConfigs({
@@ -51,6 +51,8 @@ export function PostForm({ getPosts, open, handleClose, postToEdit }: Props) {
         getPosts() // Fazendo a busca de novos posts.
 
         reset(defaultValuesNewPost)
+
+        handleClose()
       })
       .catch((err) => {
         console.error(err)
@@ -64,9 +66,40 @@ export function PostForm({ getPosts, open, handleClose, postToEdit }: Props) {
       })
   }
 
+  const onUpdatePost: SubmitHandler<IPost> = ({ title, body, id }) => {
+    updatePostService({ title, body, id })
+      .then(() => {
+        setAlertNotifyConfigs({
+          ...alertNotifyConfigs,
+          open: true,
+          text: 'Post atualizado com sucesso',
+          type: 'success',
+        })
+
+        /* Observação: A API JSONPLACEHOLDER não faz a inserção de dados realmente, 
+        então o novo post cadastrado não estará na listagem. */
+        getPosts() // Fazendo a busca de novos posts.
+
+        handleClose()
+      })
+      .catch((err) => {
+        console.error(err)
+
+        setAlertNotifyConfigs({
+          ...alertNotifyConfigs,
+          open: true,
+          text: `Erro ao tentar atualizar o post - ${err?.response?.data?.message || err?.message}`,
+          type: 'error',
+        })
+      })
+  }
+
   return (
     <Modal open={open} onClose={handleClose} className={style.overlay}>
-      <section className={style.content}>
+      <form
+        onSubmit={handleSubmit(postToEdit ? onUpdatePost : onCreatePost)}
+        className={style.content}
+      >
         <header>
           <h3>Fazer novo post</h3>
 
@@ -80,25 +113,25 @@ export function PostForm({ getPosts, open, handleClose, postToEdit }: Props) {
         </header>
 
         <main>
-          <form onSubmit={handleSubmit(onCreatePost)}>
-            <CustomTextField
-              size="small"
-              className={style.input}
-              fullWidth
-              placeholder="Título"
-              {...register('title', { required: true })}
-            />
+          <CustomTextField
+            size="small"
+            className={style.input}
+            fullWidth
+            placeholder="Título"
+            label="Título"
+            {...register('title', { required: true })}
+          />
 
-            <CustomTextField
-              size="small"
-              fullWidth
-              rows={3}
-              multiline
-              className={style.input}
-              placeholder="Escreva a sua mensagem..."
-              {...register('body', { required: true })}
-            />
-          </form>
+          <CustomTextField
+            size="small"
+            fullWidth
+            rows={5}
+            multiline
+            label="Mensagem"
+            className={style.input}
+            placeholder="Escreva a sua mensagem..."
+            {...register('body', { required: true })}
+          />
         </main>
 
         <footer>
@@ -107,10 +140,12 @@ export function PostForm({ getPosts, open, handleClose, postToEdit }: Props) {
             type="submit"
             disabled={isSubmitting}
           >
-            {isSubmitting ? <Loading size={18} /> : 'Postar'}
+            {isSubmitting && <Loading size={18} />}
+            {!isSubmitting && postToEdit && 'Editar'}
+            {!isSubmitting && !postToEdit && 'Postar'}
           </button>
         </footer>
-      </section>
+      </form>
     </Modal>
   )
 }

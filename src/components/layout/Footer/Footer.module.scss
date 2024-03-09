@@ -1,7 +1,7 @@
 @import '@/styles/colors';
 
 .footerContainer {
-  padding: 0.6rem 1.5rem;
+  padding: 1rem 1.5rem;
   line-height: 1;
   margin-top: auto;
 
@@ -10,4 +10,5 @@
   gap: 1rem;
 
   background: $blue-color-600;
+  color: $white-color;
 }
