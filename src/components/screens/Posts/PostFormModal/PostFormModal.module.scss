@@ -26,6 +26,11 @@
 
       gap: 1rem;
 
+      h3 {
+        font-weight: 600;
+        color: $gray-color-400;
+      }
+
       .closeButton {
         background: none;
         border: none;

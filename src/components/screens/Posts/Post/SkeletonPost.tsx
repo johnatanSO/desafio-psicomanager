@@ -30,7 +30,8 @@ export function SkeletonPost() {
       <footer>
         <Skeleton
           variant="rectangular"
-          width="100px"
+          width="130px"
+          height="30px"
           className={style.skeleton}
         />
       </footer>

@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
-import style from './PostForm.module.scss'
+import style from './PostFormModal.module.scss'
 import { AlertContext } from '@/contexts/alertContext'
 import { createPostService } from '@/services/posts/createPost/createPostService'
 import { CustomTextField } from '@/components/_ui/CustomTextField'
@@ -19,7 +19,12 @@ type Props = {
   handleClose: () => void
 }
 
-export function PostForm({ getPosts, open, handleClose, postToEdit }: Props) {
+export function PostFormModal({
+  getPosts,
+  open,
+  handleClose,
+  postToEdit,
+}: Props) {
   const { alertNotifyConfigs, setAlertNotifyConfigs } = useContext(AlertContext)
 
   const defaultValuesNewPost = {

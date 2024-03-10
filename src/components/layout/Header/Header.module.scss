@@ -11,4 +11,30 @@
   background: $blue-color-600;
   color: $white-color;
   box-shadow: 1px 3px 4px $gray-color-200;
+
+
+  .logoImage {
+    height: 50px;
+    width: 50px;
+  }
+
+  .link {
+    margin-left: auto;
+    text-decoration: none;
+
+    color: $white-color;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+
+    .avatar {
+      border: 1px solid $white-color;
+    }
+  }
 }

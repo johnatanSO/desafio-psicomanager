@@ -3,7 +3,7 @@ import http from '@/http'
 interface IUpdatePostParams {
   title: string
   body: string
-  id: string
+  id: number
 }
 
 export function updatePostService({ title, body, id }: IUpdatePostParams) {

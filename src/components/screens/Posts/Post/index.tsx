@@ -18,12 +18,20 @@ import { IPost } from '../interfaces/IPost'
 type Props = {
   title: string
   body: string
-  id: string
+  id: number
   handleEditPost: (postToEdit: IPost) => void
+  handleShowComments: (postId: number) => void
   getPosts: () => void
 }
 
-export function Post({ title, body, id, getPosts, handleEditPost }: Props) {
+export function Post({
+  title,
+  body,
+  id,
+  getPosts,
+  handleEditPost,
+  handleShowComments,
+}: Props) {
   const {
     alertConfirmConfigs,
     setAlertConfirmConfigs,
@@ -63,7 +71,7 @@ export function Post({ title, body, id, getPosts, handleEditPost }: Props) {
       ...alertConfirmConfigs,
       open: true,
       title: 'Alerta de confirmação',
-      text: 'Tem certeza que deseja realmente excluir este post?',
+      text: 'Atenção! Ao excluir esta postagem os comentários também serão excluídos.',
       textColor: '#ed4252',
       onClickAgree: onDeletePost,
     })
@@ -132,7 +140,13 @@ export function Post({ title, body, id, getPosts, handleEditPost }: Props) {
       </main>
 
       <footer>
-        <button className={style.showCommentsButton} type="button">
+        <button
+          className={style.showCommentsButton}
+          onClick={() => {
+            handleShowComments(id)
+          }}
+          type="button"
+        >
           <FontAwesomeIcon icon={faComments} className={style.icon} />
           Comentários
         </button>
