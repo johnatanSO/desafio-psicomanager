@@ -11,6 +11,8 @@
     flex-direction: column;
     gap: 0.6rem;
 
+    animation: fadeIn 0.2s;
+
 
     header {
         display: flex;
@@ -31,4 +33,14 @@
 
 .skeleton {
     border-radius: 20px !important;
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    } 
+    to {
+      opacity: 1;
+    }
 }

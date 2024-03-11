@@ -15,7 +15,7 @@ export function AlertNotify() {
     if (alertNotifyConfigs.open) {
       setTimeout(() => {
         alertNotifyConfigs.handleClose()
-      }, 7000)
+      }, 9000)
     }
   }, [alertNotifyConfigs])
 

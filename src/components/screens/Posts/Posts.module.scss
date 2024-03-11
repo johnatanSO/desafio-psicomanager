@@ -1,30 +1,47 @@
 @import "@/styles/colors";
 
-.newPostButton {
-  border: none;
-  color: $white-color;
-  background: $blue-color-200;
-  box-shadow: 1px 2px 3px rgba(0 0 0 / 0.15);
-
-  font-size: 0.875rem;
-  font-weight: 500;
-
-  border-radius: 20px;
-  padding: 0.7rem 1rem;
-  margin-bottom: 3rem;
-
+.listHeader {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.7rem;
+  gap: 2rem;
 
-  cursor: pointer;
-  transition: filter 0.2s;
+  margin-bottom: 3rem;
 
-  &:hover {
-    filter: brightness(0.8);
+  .newPostButton {
+    border: none;
+    color: $white-color;
+    background: $blue-color-200;
+    box-shadow: 1px 2px 3px rgba(0 0 0 / 0.15);
+  
+    font-size: 0.875rem;
+    font-weight: 500;
+  
+    border-radius: 20px;
+    padding: 0.7rem 1rem;
+  
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+  
+    cursor: pointer;
+    transition: filter 0.2s;
+  
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+
+  h4 {
+    margin-left: auto;
+
+    color: $gray-color-400;
+    font-size: 1.1rem;
+    font-weight: 600;
   }
 }
+
 
 .listPosts {
   display: flex;
@@ -37,8 +54,25 @@
   list-style-type: none;
 }
 
-@media (max-width: 1078px) {
-  .newPostButton {
-    width: 100%;
+@media (max-width: 700px) {
+  .listHeader {
+    flex-direction: column;
+    text-align: center;    
+    
+    margin-bottom: 2rem;
+    
+    h4 {
+      margin-left: auto;
+      margin-right: auto;
+
+      width: 90%;
+      padding-bottom: 0.3rem;
+
+      border-bottom: 1px solid $gray-color-200;
+    }
+
+    .newPostButton {
+      width: 100%;
+    }
   }
 }

@@ -20,7 +20,11 @@ export async function Header() {
 
       <h1>Desafio Psicomanager</h1>
 
-      <Link className={style.link} href="http://github.com/johnatanSO">
+      <Link
+        target="_blank"
+        className={style.link}
+        href="http://github.com/johnatanSO"
+      >
         <h4 className={style.userName}>{userInfo?.name || '--'}</h4>
         <Avatar
           alt={userInfo?.name}

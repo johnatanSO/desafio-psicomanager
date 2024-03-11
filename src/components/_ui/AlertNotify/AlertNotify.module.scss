@@ -2,7 +2,7 @@
 
 .alertContainer {
   position: fixed;
-  bottom: 15px;
+  top: 15px;
   left: 50%;
   z-index: 99999999;
   transform: translateX(-50%);
@@ -57,7 +57,7 @@
 
 @keyframes slideUp {
   from {
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -20%);
     opacity: 0.3;
   }
   to {

@@ -35,6 +35,8 @@
         background: none;
         border: none;
 
+        padding: 0.4rem;
+
         cursor: pointer;
         transition: filter 0.2;
 
@@ -88,6 +90,14 @@
           cursor: not-allowed;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .overlay {
+    .content {
+      width: 90%;
     }
   }
 }

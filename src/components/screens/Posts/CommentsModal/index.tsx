@@ -2,7 +2,7 @@ import style from './CommentsModal.module.scss'
 
 import { Modal } from '@mui/material'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useContext, useEffect, useState } from 'react'
 import { AlertContext } from '@/contexts/alertContext'
 import { getCommentsService } from '@/services/posts/getComments/getCommentsService'
@@ -10,6 +10,7 @@ import { IComment } from '../interfaces/IComments'
 import { Empty } from '@/components/_ui/Empty'
 import { CommentItem } from './CommentItem'
 import { SkeletonCommentItem } from './CommentItem/SkeletonCommentItem'
+import { NewCommentForm } from './NewCommentForm'
 
 type Props = {
   open: boolean
@@ -22,6 +23,9 @@ export function CommentsModal({ open, handleClose, postId }: Props) {
 
   const [comments, setComments] = useState<IComment[]>([])
   const [loadingComments, setLoadingComments] = useState<boolean>(true)
+  const [newCommentFormOpened, setNewCommentFormOpened] =
+    useState<boolean>(false)
+  const skeletonComments = [1, 2, 3, 4, 5]
 
   function getComments() {
     setLoadingComments(true)
@@ -53,7 +57,9 @@ export function CommentsModal({ open, handleClose, postId }: Props) {
       })
   }
 
-  const skeletonComments = [1, 2, 3, 4, 5]
+  function handleShowNewCommentForm() {
+    setNewCommentFormOpened(true)
+  }
 
   useEffect(() => {
     getComments()
@@ -74,12 +80,35 @@ export function CommentsModal({ open, handleClose, postId }: Props) {
           </button>
         </header>
 
-        <main>
+        <main style={{ padding: '0 0.7rem' }}>
+          <button
+            disabled={newCommentFormOpened}
+            onClick={handleShowNewCommentForm}
+            className={style.handleNewCommentButton}
+            type="button"
+          >
+            <FontAwesomeIcon className={style.icon} icon={faPlus} />
+            Novo comentário{' '}
+          </button>
+
+          <p className={style.commentsAmountText}>
+            <b>{comments.length}</b> comentários
+          </p>
+
           {!loadingComments && comments.length === 0 && (
             <Empty text="Este post não tem comentários" />
           )}
 
           <ul className={style.listComments}>
+            {newCommentFormOpened && (
+              <NewCommentForm
+                postId={postId}
+                handleClose={() => {
+                  setNewCommentFormOpened(false)
+                }}
+              />
+            )}
+
             {!loadingComments &&
               comments.length > 0 &&
               comments.map((comment) => {

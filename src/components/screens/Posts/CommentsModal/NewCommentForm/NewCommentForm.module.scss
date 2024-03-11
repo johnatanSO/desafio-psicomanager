@@ -1,0 +1,81 @@
+@import '@/styles/colors';
+
+.itemContainer {
+    background: $gray-color-100;
+    width: 100%;
+    
+    padding: 1rem;
+    border-radius: 20px;
+
+    animation: fadeIn 0.2s;
+    
+    form {
+        display: flex;
+        flex-direction: column;
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            padding-bottom: 0.6rem;
+    
+            .titleInput {
+                margin-right: auto;
+                border-radius: 20px;
+                background: $gray-color-200;
+            }
+        }
+    
+        main {
+          padding-top: 0.6rem;
+            .commentInput {
+                border-radius: 20px;
+                background: $gray-color-200;
+            }
+        }
+    }
+}
+
+.confirmCommentButton, 
+.cancelCommentButton {
+    border: none;
+    
+    color: $white-color;
+
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    box-shadow: 1px 2px 3px rgba(0 0 0 / 0.2);
+
+    cursor: pointer;
+    transition: filter 0.2s;
+
+    &:not(:disabled):hover {
+      filter: brightness(0.8);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    &.confirmCommentButton {
+      background: $blue-color-200;
+    }
+    &.cancelCommentButton {
+      background: $red-color-100;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    } 
+    to {
+      opacity: 1;
+    }
+  }

@@ -70,14 +70,18 @@ export function Posts() {
 
   return (
     <>
-      <button
-        className={style.newPostButton}
-        type="button"
-        onClick={handleNewPost}
-      >
-        <FontAwesomeIcon icon={faPlus} className={style.icon} />
-        Novo post
-      </button>
+      <section className={style.listHeader}>
+        <button
+          className={style.newPostButton}
+          type="button"
+          onClick={handleNewPost}
+        >
+          <FontAwesomeIcon icon={faPlus} className={style.icon} />
+          Novo post
+        </button>
+
+        <h4>Minhas postagens</h4>
+      </section>
 
       {!loadingPosts && posts.length === 0 && (
         <Empty text="Nenhum post encontrado" />
@@ -109,6 +113,7 @@ export function Posts() {
       {modalPostFormOpened && (
         <PostFormModal
           getPosts={getPosts}
+          posts={posts}
           open={modalPostFormOpened}
           postToEdit={postToEdit}
           handleClose={() => {

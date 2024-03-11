@@ -14,6 +14,7 @@ import { IPost } from '../interfaces/IPost'
 
 type Props = {
   open: boolean
+  posts: IPost[]
   postToEdit: IPost | null
   getPosts: () => void
   handleClose: () => void
@@ -21,6 +22,7 @@ type Props = {
 
 export function PostFormModal({
   getPosts,
+  posts,
   open,
   handleClose,
   postToEdit,
@@ -36,12 +38,25 @@ export function PostFormModal({
     register,
     handleSubmit,
     reset,
-    formState: { isSubmitting },
+    formState: { isSubmitting, errors },
   } = useForm<IPost>({
     defaultValues: postToEdit || defaultValuesNewPost,
   })
 
   const onCreatePost: SubmitHandler<IPost> = ({ title, body }) => {
+    const postAlreadyExist = posts.find((post) => post.title === title)
+
+    if (postAlreadyExist) {
+      setAlertNotifyConfigs({
+        ...alertNotifyConfigs,
+        open: true,
+        text: 'Já existe um post cadastrado com este título, por favor altere e tente novamente.',
+        type: 'error',
+      })
+
+      return
+    }
+
     createPostService({ title, body })
       .then(() => {
         setAlertNotifyConfigs({
@@ -122,7 +137,9 @@ export function PostFormModal({
             size="small"
             className={style.input}
             fullWidth
+            error={!!errors.title}
             placeholder="Título"
+            required
             label="Título"
             {...register('title', { required: true })}
           />
@@ -131,7 +148,9 @@ export function PostFormModal({
             size="small"
             fullWidth
             rows={5}
+            error={!!errors.body}
             multiline
+            required
             label="Mensagem"
             className={style.input}
             placeholder="Escreva a sua mensagem..."
