@@ -21,6 +21,7 @@
 <h3>📝 Funcionalidades</h3>
   <ul>
     <li>Listagem de posts;</li>
+    <li>Cadastro de um novo post</li>
     <li>Edição de um post;</li>
     <li>Excluir um post;</li>
     <li>Visualização de comentários de um post;</li>
