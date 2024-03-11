@@ -84,8 +84,7 @@ export function Post({
         <b
           onClick={() => {
             // Eu não colocaria este onClick aqui, deixaria ele somente no botão do canto superior direito,
-            // Porém, no case do desafio, é pedido para que seja aberto os comentários ao clicar em qualquer área da postagem,
-            // então resolvi deixar.
+            // Porém, no case do desafio, é pedido para que seja aberto os comentários ao clicar em qualquer área da postagem, então resolvi deixar.
             handleShowComments(id)
           }}
         >
@@ -111,6 +110,7 @@ export function Post({
           <FontAwesomeIcon className={style.icon} icon={faEllipsis} />
         </button>
 
+        {/* Popover com opções de ação */}
         <Popover
           open={!!anchorOptions}
           anchorEl={anchorOptions}
@@ -164,6 +164,7 @@ export function Post({
       </main>
 
       <footer>
+        {/* Exibir os comentários */}
         <button
           className={style.showCommentsButton}
           onClick={() => {

@@ -63,7 +63,7 @@ export function PostFormModal({
         setAlertNotifyConfigs({
           ...alertNotifyConfigs,
           open: true,
-          text: 'Post realizado com sucesso',
+          text: 'Postagem realizada com sucesso',
           type: 'success',
         })
 
@@ -81,7 +81,7 @@ export function PostFormModal({
         setAlertNotifyConfigs({
           ...alertNotifyConfigs,
           open: true,
-          text: `Erro ao tentar realizar o post - ${err?.response?.data?.message || err?.message}`,
+          text: `Erro ao tentar realizar a postagem - ${err?.response?.data?.message || err?.message}`,
           type: 'error',
         })
       })
@@ -93,7 +93,7 @@ export function PostFormModal({
         setAlertNotifyConfigs({
           ...alertNotifyConfigs,
           open: true,
-          text: 'Post atualizado com sucesso',
+          text: 'Postagem atualizada com sucesso',
           type: 'success',
         })
 
@@ -109,7 +109,7 @@ export function PostFormModal({
         setAlertNotifyConfigs({
           ...alertNotifyConfigs,
           open: true,
-          text: `Erro ao tentar atualizar o post - ${err?.response?.data?.message || err?.message}`,
+          text: `Erro ao tentar atualizar a postagem - ${err?.response?.data?.message || err?.message}`,
           type: 'error',
         })
       })

@@ -1,81 +1,81 @@
-@import '@/styles/colors';
+@import "@/styles/colors";
 
 .itemContainer {
-    background: $gray-color-100;
-    width: 100%;
-    
-    padding: 1rem;
-    border-radius: 20px;
+  background: $gray-color-100;
+  width: 100%;
 
-    animation: fadeIn 0.2s;
-    
-    form {
-        display: flex;
-        flex-direction: column;
+  padding: 1rem;
+  border-radius: 20px;
 
-        header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+  animation: fadeIn 0.2s;
 
-            padding-bottom: 0.6rem;
-    
-            .titleInput {
-                margin-right: auto;
-                border-radius: 20px;
-                background: $gray-color-200;
-            }
-        }
-    
-        main {
-          padding-top: 0.6rem;
-            .commentInput {
-                border-radius: 20px;
-                background: $gray-color-200;
-            }
-        }
+  form {
+    display: flex;
+    flex-direction: column;
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      padding-bottom: 0.6rem;
+
+      .titleInput {
+        margin-right: auto;
+        border-radius: 20px;
+        background: $gray-color-200;
+      }
     }
+
+    main {
+      padding-top: 0.6rem;
+      .commentInput {
+        border-radius: 20px;
+        background: $gray-color-200;
+      }
+    }
+  }
 }
 
-.confirmCommentButton, 
+.confirmCommentButton,
 .cancelCommentButton {
-    border: none;
-    
-    color: $white-color;
+  border: none;
 
-    padding: 0.6rem 1rem;
-    border-radius: 20px;
+  color: $white-color;
 
-    font-size: 0.875rem;
-    font-weight: 500;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
 
-    box-shadow: 1px 2px 3px rgba(0 0 0 / 0.2);
+  font-size: 0.875rem;
+  font-weight: 500;
 
-    cursor: pointer;
-    transition: filter 0.2s;
+  box-shadow: 1px 2px 3px rgba(0 0 0 / 0.2);
 
-    &:not(:disabled):hover {
-      filter: brightness(0.8);
-    }
+  cursor: pointer;
+  transition: filter 0.2s;
 
-    &:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
-
-    &.confirmCommentButton {
-      background: $blue-color-200;
-    }
-    &.cancelCommentButton {
-      background: $red-color-100;
-    }
+  &:not(:disabled):hover {
+    filter: brightness(0.8);
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    } 
-    to {
-      opacity: 1;
-    }
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
   }
+
+  &.confirmCommentButton {
+    background: $blue-color-200;
+  }
+  &.cancelCommentButton {
+    background: $red-color-100;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

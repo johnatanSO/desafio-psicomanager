@@ -106,7 +106,7 @@ export function Posts() {
             )
           })}
 
-        {/* Lista de postagens que será exibida enquanto as postagens reais não forem carregadas ainda. */}
+        {/* Lista com modelo de postagens que será exibida enquanto as postagens reais não forem carregadas ainda. */}
         {loadingPosts &&
           skeletonPosts.map((skeletonItem) => {
             return <SkeletonPost key={skeletonItem} />

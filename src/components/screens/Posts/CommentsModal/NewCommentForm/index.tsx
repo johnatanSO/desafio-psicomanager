@@ -49,6 +49,8 @@ export function NewCommentForm({ postId, handleClose, getComments }: Props) {
         handleClose()
       })
       .catch((err) => {
+        console.error(err)
+
         setAlertNotifyConfigs({
           ...alertNotifyConfigs,
           open: true,
