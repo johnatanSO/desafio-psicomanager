@@ -84,7 +84,7 @@
   
   <li>
     <h4>Modal com comentários</h4>
-    <p>Ao clicar no id, título, body ou no botão "Comentário", este modal é aberto com os comentários da postagem</p>
+    <p>Ao clicar no id, título, body ou no botão "Comentários", este modal é aberto com os comentários da postagem</p>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/8a6e778e-4cc5-404e-81ee-6a41975ecbb0" />
   </li>
   <br>
