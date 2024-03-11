@@ -124,9 +124,10 @@
   <li>
     <h4> Modal de edição de uma postagem</h4>
     <p>Ao clicar no botão editar, este modal é aberto com os campos preenchidos com as informações do post selecionado para edição</p>
-    <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/1974b6d3-9659-4356-8eb3-41977f320edc" />
-    <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/cf5cd577-616c-4f4b-96a0-e096e8606b98" />
+    <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/c923bc5b-f8e4-48d1-986c-659c6b9251b4" />
+    <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/204c32e2-074a-4ec9-bf76-952a7effe798" />
   </li>
+
 
    <br>
 </ul>
