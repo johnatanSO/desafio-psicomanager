@@ -65,10 +65,9 @@
   <li>
     <h4>Lista de postagens</h4>
     <p>Ao abrir a página, as postagens são carregadas</p>
-    <div style="display: flex; gap: 1rem">
-      <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/7c29449f-571c-4b02-b341-9db182e0c0ac" />
-      <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/f1f1111e-1d96-47d4-9dbb-f599f845ef8e" />
-    </div>
+    <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/7c29449f-571c-4b02-b341-9db182e0c0ac" />
+     <br>
+    <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/f1f1111e-1d96-47d4-9dbb-f599f845ef8e" />
   </li>
   <br>
 
@@ -76,6 +75,7 @@
     <h4>Modal para cadastro de uma nova postagem</h4>
     <p>Ao clicar no botão "Nova postagem" este modal é aberto com o formulário para cadastrar uma nova postagem</p>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/34c9501d-01e4-411d-8704-86ca537be245" />
+     <br>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/5b8d56a8-d5be-4ca9-b760-9420875eb01d" />
   </li>
 
@@ -85,6 +85,7 @@
     <h4>Modal com comentários</h4>
     <p>Ao clicar no id, título, body ou no botão "Comentários", este modal é aberto com os comentários da postagem</p>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/8a6e778e-4cc5-404e-81ee-6a41975ecbb0" />
+     <br>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/6b552856-e531-44d6-868f-653416aa35f2" />
   </li>
 
@@ -94,6 +95,7 @@
     <h4> Formulário para inserir um novo comentário</h4>
     <p>Ao clicar no botão "Novo comentário", aparecerá um formulário para inserir um novo comentário</p>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/69220f80-24f2-4432-9790-cf45f6b55881" />
+     <br>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/7d34f32e-af74-4b16-8e4c-ff83b2b9934e" />
   </li>
 
@@ -103,6 +105,7 @@
     <h4> Opções para editar e excluir uma postagem</h4>
     <p>Ao clicar no botão do canto superior direito, é aberto as opções de editar ou excluir uma postagem</p>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/d9c57254-77cf-413c-8012-8514c7723214" />
+     <br>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/848a5b8e-1742-4078-ad60-b88a669d11e2" />
   </li>
 
@@ -112,6 +115,7 @@
     <h4> Alerta quando é selecionada a opção de excluir uma postagem</h4>
     <p>Ao clicar em excluir, é aberto esta confirmação</p>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/47040f6b-5b98-44b9-835f-7690a5c9c1ef" />
+     <br>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/caa965a7-7a88-4280-b5f4-4d234c475322" />
   </li>
 
@@ -121,6 +125,7 @@
     <h4> Modal de edição de uma postagem</h4>
     <p>Ao clicar no botão editar, este modal é aberto com os campos preenchidos com as informações do post selecionado para edição</p>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/c923bc5b-f8e4-48d1-986c-659c6b9251b4" />
+     <br>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/204c32e2-074a-4ec9-bf76-952a7effe798" />
   </li>
 
