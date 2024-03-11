@@ -9,14 +9,27 @@
 <ul>
   
     - React/NextJS 14, 
-    - React hook form;
+    - React Hook Form;
     - SASS/CSS (Modules);
     - Typescript/Javascript;
     - Axios;
     - Material UI;
-    - Fontawesome;
+    - Font Awesome;
 
 </ul>
+
+<h3>📋 Observações</h3>
+<li>
+  <p>
+    Realizei o desafio construindo o projeto com o Next por motivos de que, ele possui basicamente a mesma forma de trabalhar que o React, porém, com algumas features a mais. E na descrição da vaga também, pedia ele como "conhecimento adicional", e eu já tenho uma boa experiência com ele também, então resolvi juntar o útil ao agradável.
+  </p>
+</li>
+
+<li>
+  <p>
+    Alguns comentários foram adicionados no código para facilitar o entendimento de quem estiver avaliando.
+  </p>
+</li>
   
 <h3>📝 Funcionalidades</h3>
   <ul>
@@ -39,13 +52,15 @@
 
 <li>Clone o repositório com: git clone https://github.com/johnatanSO/desafio-psicomanager.git</li>
 <li>Entre em uma IDE de sua preferência</li>
-<li>Certifique-se de ter uma versão do Node instalada maior ou igual a v18</li>
+<li>Certifique-se de ter uma versão do Node instalada igual ou maior que a v18.17</li>
 <li>Certifique-se de ter também instalado o gerenciador de pacotes Yarn, caso não tenha instalado, utilize o comando 'npm install -g yarn'</li>
-<li>Instale as dependências 'yarn'</li>
-<li>Execute o projeto com o script 'yarn dev'</li>
+<li>Instale as dependências utilizando o comando 'yarn'</li>
+<li>Execute o projeto com o comando 'yarn dev'</li>
 <li>O projeto será executado na porta 3000 no endereço localhost</li>
     
 <br>
+
+<h3>🖼 Telas da aplicação e explicações</h3>
  
 <div>
  <h2>🎓 Autor</h2>

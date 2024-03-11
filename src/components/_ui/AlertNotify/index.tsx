@@ -12,6 +12,7 @@ export function AlertNotify() {
   const { alertNotifyConfigs } = useContext(AlertContext)
 
   useEffect(() => {
+    // Remove a notificação depois de 9 segundos depois que ela é aberta.
     if (alertNotifyConfigs.open) {
       setTimeout(() => {
         alertNotifyConfigs.handleClose()

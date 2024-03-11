@@ -8,6 +8,7 @@ type Props = {
   icon?: IconDefinition
 }
 
+// Componente para itens vazios
 export function Empty({ text, icon }: Props) {
   return (
     <section className={style.container}>

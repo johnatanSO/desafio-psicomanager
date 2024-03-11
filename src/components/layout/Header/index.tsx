@@ -6,6 +6,8 @@ import { getUserInfoService } from '@/services/user/getUserInfo/getUserInfoServi
 import Link from 'next/link'
 
 export async function Header() {
+  /* Utilizando o Server Side do Next para buscar os dados de usuário da API do Github,
+  no caso estou fazendo a busca da minha própria conta. */
   const { data: userInfo } = await getUserInfoService()
 
   return (

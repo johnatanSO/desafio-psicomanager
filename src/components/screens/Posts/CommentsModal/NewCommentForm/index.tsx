@@ -9,10 +9,11 @@ import { AlertContext } from '@/contexts/alertContext'
 
 type Props = {
   postId: number
+  getComments: () => void
   handleClose: () => void
 }
 
-export function NewCommentForm({ postId, handleClose }: Props) {
+export function NewCommentForm({ postId, handleClose, getComments }: Props) {
   const { alertNotifyConfigs, setAlertNotifyConfigs } = useContext(AlertContext)
 
   const defaultValuesNewPost = {
@@ -39,7 +40,11 @@ export function NewCommentForm({ postId, handleClose }: Props) {
           type: 'success',
         })
 
+        /* A API utilizada não faz a inserção de comentários realmente, então o novo comentário não irá aparacer na nova lista */
+        getComments() // Fazendo a busca dos comentários atualizados.
+
         reset(defaultValuesNewPost)
+
         handleClose()
       })
       .catch((err) => {

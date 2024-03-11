@@ -32,6 +32,7 @@ export function CommentsModal({ open, handleClose, postId }: Props) {
 
     getCommentsService(postId)
       .then(({ data }) => {
+        // Colocando os comentários em ordem alfabética.
         const ordenedComments = data.sort((a: IComment, b: IComment) => {
           if (a.name < b.name) {
             return -1
@@ -103,6 +104,7 @@ export function CommentsModal({ open, handleClose, postId }: Props) {
             {newCommentFormOpened && (
               <NewCommentForm
                 postId={postId}
+                getComments={getComments}
                 handleClose={() => {
                   setNewCommentFormOpened(false)
                 }}
@@ -128,8 +130,6 @@ export function CommentsModal({ open, handleClose, postId }: Props) {
               })}
           </ul>
         </main>
-
-        <footer></footer>
       </section>
     </Modal>
   )

@@ -47,7 +47,7 @@ export function Post({
         setAlertNotifyConfigs({
           ...alertNotifyConfigs,
           open: true,
-          text: 'Post excluido com sucesso',
+          text: 'Postagem excluida com sucesso',
           type: 'success',
         })
 
@@ -59,7 +59,7 @@ export function Post({
         setAlertNotifyConfigs({
           ...alertNotifyConfigs,
           open: true,
-          text: `Erro ao tentar excluir o post - ${err?.response?.data?.message || err?.message}`,
+          text: `Erro ao tentar excluir a postagem - ${err?.response?.data?.message || err?.message}`,
           type: 'error',
         })
       })
@@ -67,6 +67,7 @@ export function Post({
 
   function handleDeletePost() {
     setAnchorOptions(null)
+    // Alerta de confirmação para remover uma postagem, como pedido no case do desafio.
     setAlertConfirmConfigs({
       ...alertConfirmConfigs,
       open: true,
@@ -80,6 +81,10 @@ export function Post({
   return (
     <li className={style.postContainer}>
       <header>
+        <b>{id || '--'}</b>
+
+        <Divider orientation="vertical" />
+
         <h4>{title || 'Título'}</h4>
 
         <button

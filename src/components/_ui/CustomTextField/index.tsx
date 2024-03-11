@@ -5,6 +5,7 @@ import {
   TextField,
 } from '@mui/material'
 
+// Customizando o input TextField do Material UI.
 export const CustomTextField = styled(TextField)({
   [`& .${outlinedInputClasses.root} .${outlinedInputClasses.notchedOutline}`]: {
     borderRadius: '20px',

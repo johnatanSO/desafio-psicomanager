@@ -20,12 +20,14 @@ export function Posts() {
   const [postToEdit, setPostToEdit] = useState<IPost | null>(null)
   const [postCommentsId, setPostCommentsId] = useState<number | null>(null)
   const [loadingPosts, setLoadingPosts] = useState<boolean>(true)
+  const skeletonPosts = [1, 2, 3, 4, 5]
 
   function getPosts() {
     setLoadingPosts(true)
 
     listPostsService()
       .then(({ data }) => {
+        // Colocando as postagens em ordem alfabética pelo título, como pedido no case do desafio.
         const ordenedPosts = data.sort((a: IPost, b: IPost) => {
           if (a.title < b.title) {
             return -1
@@ -62,8 +64,6 @@ export function Posts() {
     setPostCommentsId(postId)
   }
 
-  const skeletonPosts = [1, 2, 3, 4, 5]
-
   useEffect(() => {
     getPosts()
   }, [])
@@ -87,6 +87,8 @@ export function Posts() {
         <Empty text="Nenhum post encontrado" />
       )}
 
+      {/* No case fornecido para o desafio, não ficou muito claro se era OBRIGATÓRIO a utilização de uma <table> para exibir as postagens. */}
+      {/* Fiz a listagem com uma <ul>, pois achei que seria mais "semântico", mas todos os itens pedidos estão sendo exibidos (id, title, body) */}
       <ul className={style.listPosts}>
         {!loadingPosts &&
           posts.length > 0 &&
@@ -110,6 +112,7 @@ export function Posts() {
           })}
       </ul>
 
+      {/* O mesmo modal para cadastro e atualização de uma postagem  */}
       {modalPostFormOpened && (
         <PostFormModal
           getPosts={getPosts}

@@ -44,13 +44,14 @@ export function PostFormModal({
   })
 
   const onCreatePost: SubmitHandler<IPost> = ({ title, body }) => {
+    // Verificando se já existe uma postagem com o mesmo título, como pedido no case do desafio.
     const postAlreadyExist = posts.find((post) => post.title === title)
 
     if (postAlreadyExist) {
       setAlertNotifyConfigs({
         ...alertNotifyConfigs,
         open: true,
-        text: 'Já existe um post cadastrado com este título, por favor altere e tente novamente.',
+        text: 'Já existe uma postagem cadastrada com este título, por favor altere e tente novamente.',
         type: 'error',
       })
 
@@ -98,7 +99,7 @@ export function PostFormModal({
 
         /* Observação: A API JSONPLACEHOLDER não faz a inserção de dados realmente, 
         então o novo post cadastrado não estará na listagem. */
-        getPosts() // Fazendo a busca de novos posts.
+        getPosts() // Fazendo a busca das postagens atualizadas.
 
         handleClose()
       })
