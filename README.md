@@ -65,7 +65,7 @@
   <li>
     <h4>Lista de postagens</h4>
     <p>Ao abrir a página, as postagens são carregadas</p>
-    <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/7c29449f-571c-4b02-b341-9db182e0c0ac" />
+    <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/f2e1e41b-8265-46f8-94c9-c0cf60d4d7b3" />
      <br>
     <img src="https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/f1f1111e-1d96-47d4-9dbb-f599f845ef8e" />
   </li>
