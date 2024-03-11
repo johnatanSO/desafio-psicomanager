@@ -20,21 +20,15 @@
 
 <h3>📋 Observações</h3>
 <li>
-  <p>
     Realizei o desafio construindo o projeto com o Next por motivos de que, ele possui basicamente a mesma forma de trabalhar que o React, porém, com algumas features a mais. E na descrição da vaga também, pedia ele como "conhecimento adicional", e eu já tenho uma boa experiência com ele também, então resolvi juntar o útil ao agradável;
-  </p>
 </li>
 
 <li>
-  <p>
     Alguns comentários foram adicionados no código para facilitar o entendimento de quem estiver avaliando;
-  </p>
 </li>
 
 <li>
-  <p>
     O sistema está completamente responsivo para a versão mobile;
-  </p>
 </li>
   
 <h3>📝 Funcionalidades</h3>
