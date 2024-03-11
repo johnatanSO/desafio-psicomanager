@@ -67,7 +67,38 @@
 <br>
 
 <h3>🖼 Telas da aplicação e explicações</h3>
- 
+<ul>
+  <li>
+    #### Lista de postagens
+   ![Screenshot_1](https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/7c29449f-571c-4b02-b341-9db182e0c0ac)
+  </li>
+
+  <li>
+    #### Modal para cadastro de uma nova postagem
+    ![Screenshot_2](https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/34c9501d-01e4-411d-8704-86ca537be245)
+  </li>
+  
+  <li>
+    #### Modal com comentários
+    ![Screenshot_3](https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/8a6e778e-4cc5-404e-81ee-6a41975ecbb0)
+  </li>
+  
+  <li>
+    #### Formulário para inserir um novo comentário
+   ![Screenshot_4](https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/69220f80-24f2-4432-9790-cf45f6b55881)
+  </li>
+  
+  <li>
+    #### Formulário para inserir um novo comentário
+   ![Screenshot_4](https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/69220f80-24f2-4432-9790-cf45f6b55881)
+  </li>
+  
+  <li>
+    #### Opções para editar e excluir uma postagem
+    ![Screenshot_5](https://github.com/johnatanSO/desafio-psicomanager/assets/69802042/d9c57254-77cf-413c-8012-8514c7723214)
+  </li>
+</ul>
+
 <div>
  <h2>🎓 Autor</h2>
  <h3>Feito com 💜 by <a href="https://github.com/johnatanSO" target="_blank">Johnatan Santos</a></h3>
