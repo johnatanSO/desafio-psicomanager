@@ -2,7 +2,7 @@
 
 <h3> 💻 Sobre o projeto</h3>
 
-<p>Descrição: Sistema de posts para vaga de de dev front-end</p>
+<p>Descrição: Sistema de postagens de uma rede social para vaga de de dev front-end</p>
 
 <h4>Tecnologias/Bibliotecas utilizadas: </h4>
 
@@ -20,12 +20,12 @@
   
 <h3>📝 Funcionalidades</h3>
   <ul>
-    <li>Listagem de posts;</li>
-    <li>Cadastro de um novo post</li>
-    <li>Edição de um post;</li>
-    <li>Excluir um post;</li>
-    <li>Visualização de comentários de um post;</li>
-    <li>Criar um novo comentário</li>
+    <li>Listagem de postagens;</li>
+    <li>Cadastro de uma nova postagem;</li>
+    <li>Edição de uma postagem;</li>
+    <li>Excluir uma postagem;</li>
+    <li>Visualização de comentários de uma postagem;</li>
+    <li>Criar um novo comentário na postagem;</li>
   </ul>
 
 <br />
