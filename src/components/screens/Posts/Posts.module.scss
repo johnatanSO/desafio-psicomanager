@@ -12,22 +12,21 @@
     color: $white-color;
     background: $blue-color-200;
     box-shadow: 1px 2px 3px rgba(0 0 0 / 0.15);
-  
+
     font-size: 0.875rem;
     font-weight: 500;
-  
+
     border-radius: 20px;
     padding: 0.7rem 1rem;
-  
-  
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.7rem;
-  
+
     cursor: pointer;
     transition: filter 0.2s;
-  
+
     &:hover {
       filter: brightness(0.8);
     }
@@ -41,7 +40,6 @@
     font-weight: 600;
   }
 }
-
 
 .listPosts {
   display: flex;
@@ -57,10 +55,10 @@
 @media (max-width: 700px) {
   .listHeader {
     flex-direction: column;
-    text-align: center;    
-    
+    text-align: center;
+
     margin-bottom: 2rem;
-    
+
     h4 {
       margin-left: auto;
       margin-right: auto;

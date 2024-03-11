@@ -1,46 +1,44 @@
-@import '@/styles/colors';
+@import "@/styles/colors";
 
 .itemContainer {
-    background: $gray-color-100;
-    width: 100%;
+  background: $gray-color-100;
+  width: 100%;
 
-    padding: 1rem;
-    border-radius: 20px;
+  padding: 1rem;
+  border-radius: 20px;
 
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  animation: fadeIn 0.2s;
+
+  header {
     display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+    align-items: center;
+    gap: 1rem;
 
-    animation: fadeIn 0.2s;
-
-
-    header {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-
-        .username {
-            margin-right: auto;
-        }
+    .username {
+      margin-right: auto;
     }
+  }
 
-    main {
-        p {
-            font-size: 0.875rem;
-        }
+  main {
+    p {
+      font-size: 0.875rem;
     }
+  }
 }
 
 .skeleton {
-    border-radius: 20px !important;
+  border-radius: 20px !important;
 }
 
-
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    } 
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

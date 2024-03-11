@@ -15,14 +15,14 @@
   width: 100%;
 
   header,
-  main, footer {
+  main,
+  footer {
     padding: 1rem 1.2rem;
   }
 
   header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 1rem;
 
     font-size: 1rem;
@@ -31,6 +31,8 @@
       background: none;
       color: $gray-color-300;
       border: none;
+
+      margin-left: auto;
 
       line-height: 1;
       font-size: 1.1rem;
@@ -74,7 +76,7 @@
         filter: brightness(0.8);
       }
 
-      &:disabled{
+      &:disabled {
         opacity: 0.4;
         cursor: not-allowed;
       }
