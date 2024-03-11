@@ -124,6 +124,7 @@ export function CommentsModal({ open, handleClose, postId }: Props) {
                 )
               })}
 
+            {/* Lista de comentários que será exibida enquanto os comentários reais não forem carregados ainda. */}
             {loadingComments &&
               skeletonComments.map((skeletonItem) => {
                 return <SkeletonCommentItem key={skeletonItem} />

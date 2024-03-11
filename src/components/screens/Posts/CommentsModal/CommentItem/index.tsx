@@ -14,15 +14,15 @@ export function CommentItem({ name, body }: Props) {
         <Avatar
           sx={{ width: 25, height: 25 }}
           className={style.avatar}
-          alt={name || 'Usuário'}
+          alt={name || '--'}
         />
-        <h5 className={style.username}>{name || 'Usuário desconhecido'}</h5>
+        <h5 className={style.username}>{name || '--'}</h5>
       </header>
 
       <Divider />
 
       <main>
-        <p>{body || 'Body do comentário'}</p>
+        <p>{body || '--'}</p>
       </main>
     </li>
   )

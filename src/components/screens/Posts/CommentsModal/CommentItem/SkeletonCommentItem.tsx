@@ -1,6 +1,7 @@
 import { Divider, Skeleton } from '@mui/material'
 import style from './CommentItem.module.scss'
 
+// Comentário que será exibido enquanto os comentários reais não forem carregados ainda.
 export function SkeletonCommentItem() {
   return (
     <li className={style.itemContainer}>

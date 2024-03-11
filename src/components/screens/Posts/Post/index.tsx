@@ -81,11 +81,26 @@ export function Post({
   return (
     <li className={style.postContainer}>
       <header>
-        <b>{id || '--'}</b>
+        <b
+          onClick={() => {
+            // Eu não colocaria este onClick aqui, deixaria ele somente no botão do canto superior direito,
+            // Porém, no case do desafio, é pedido para que seja aberto os comentários ao clicar em qualquer área da postagem,
+            // então resolvi deixar.
+            handleShowComments(id)
+          }}
+        >
+          {id || '--'}
+        </b>
 
         <Divider orientation="vertical" />
 
-        <h4>{title || 'Título'}</h4>
+        <h4
+          onClick={() => {
+            handleShowComments(id)
+          }}
+        >
+          {title || '--'}
+        </h4>
 
         <button
           onClick={(event) => {
@@ -140,7 +155,11 @@ export function Post({
         </Popover>
       </header>
 
-      <main>
+      <main
+        onClick={() => {
+          handleShowComments(id)
+        }}
+      >
         <p>{body || '--'}</p>
       </main>
 

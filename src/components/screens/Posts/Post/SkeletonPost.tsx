@@ -1,17 +1,25 @@
-'use client'
-
 import style from './Post.module.scss'
-import { Skeleton } from '@mui/material'
+import { Divider, Skeleton } from '@mui/material'
 
+// Postagem que será exibida enquanto as postagens reais não forem carregadas ainda.
 export function SkeletonPost() {
   return (
     <li className={style.postContainer}>
       <header>
         <Skeleton
           variant="rectangular"
+          width="30px"
+          className={style.skeleton}
+        />
+
+        <Divider orientation="vertical" />
+
+        <Skeleton
+          variant="rectangular"
           width="100%"
           className={style.skeleton}
         />
+
         <Skeleton
           variant="rectangular"
           width="30px"

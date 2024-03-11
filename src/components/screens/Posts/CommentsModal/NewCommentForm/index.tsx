@@ -40,7 +40,8 @@ export function NewCommentForm({ postId, handleClose, getComments }: Props) {
           type: 'success',
         })
 
-        /* A API utilizada não faz a inserção de comentários realmente, então o novo comentário não irá aparacer na nova lista */
+        /* OBS: A API utilizada não faz a inserção de comentários realmente, 
+        então o novo comentário não irá aparacer na nova lista */
         getComments() // Fazendo a busca dos comentários atualizados.
 
         reset(defaultValuesNewPost)

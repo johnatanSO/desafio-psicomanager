@@ -35,6 +35,7 @@ export function AlertConfirm() {
             onClick={async () => {
               await alertConfirmConfigs.onClickAgree()
               alertConfirmConfigs.handleClose()
+              /* A função definida no onClickAgree é executada e logo em seguida as configurações do alerta são resetadas */
             }}
           >
             Confirmar
