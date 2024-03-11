@@ -53,6 +53,7 @@ export function AlertContextComponent({
       handleClose: onCloseNotify,
     })
 
+  // Função que faz o reset de configurações do alerta de notificação.
   function onCloseNotify() {
     setAlertNotifyConfigs({
       ...alertNotifyConfigs,
@@ -62,6 +63,7 @@ export function AlertContextComponent({
     })
   }
 
+  // Função que faz o reset de configurações do alerta de confirmação.
   function onCloseAlertConfirm() {
     setAlertConfirmConfigs({
       ...alertConfirmConfigs,
