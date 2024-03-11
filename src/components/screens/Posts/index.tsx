@@ -77,7 +77,7 @@ export function Posts() {
           onClick={handleNewPost}
         >
           <FontAwesomeIcon icon={faPlus} className={style.icon} />
-          Novo post
+          Nova postagem
         </button>
 
         <h4>Minhas postagens</h4>
