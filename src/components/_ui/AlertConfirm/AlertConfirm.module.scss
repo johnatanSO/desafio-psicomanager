@@ -68,3 +68,9 @@
 .confirmButton {
   background: $blue-color-100;
 }
+
+@media (max-width: 780px) {
+  .alertContainer {
+    max-width: 90%;
+  }
+}

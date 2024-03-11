@@ -122,7 +122,7 @@ export function PostFormModal({
         className={style.content}
       >
         <header>
-          <h3>Fazer novo post</h3>
+          <h3>{postToEdit ? 'Editar postagem' : 'Fazer nova postagem'}</h3>
 
           <button
             type="button"

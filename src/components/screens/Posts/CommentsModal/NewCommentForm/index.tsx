@@ -108,6 +108,25 @@ export function NewCommentForm({ postId, handleClose, getComments }: Props) {
             {...register('body', { required: true })}
           />
         </main>
+        <footer>
+          <button
+            onClick={() => {
+              reset(defaultValuesNewPost)
+              handleClose()
+            }}
+            type="button"
+            className={style.cancelCommentButton}
+          >
+            Cancelar
+          </button>
+          <button
+            disabled={isSubmitting}
+            className={style.confirmCommentButton}
+            type="submit"
+          >
+            Comentar
+          </button>
+        </footer>
       </form>
     </li>
   )

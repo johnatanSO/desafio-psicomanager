@@ -34,6 +34,9 @@
         background: $gray-color-200;
       }
     }
+    footer {
+      display: none;
+    }
   }
 }
 
@@ -77,5 +80,27 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 780px) {
+  .itemContainer {
+    form {
+      header {
+        flex-direction: column;
+        button {
+          display: none;
+        }
+      }
+      footer {
+        display: flex;
+        padding-top: 0.6rem;
+        gap: 1rem;
+
+        button {
+          flex: 1;
+        }
+      }
+    }
   }
 }
