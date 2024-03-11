@@ -54,7 +54,7 @@ export function CommentsModal({ open, handleClose, postId }: Props) {
         })
       })
       .finally(() => {
-        setLoadingComments(false)
+        setLoadingComments(true)
       })
   }
 
